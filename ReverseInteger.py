@@ -103,7 +103,7 @@ def reverse(x):
             elif (INTMAX // 10 < rev): return 0
             else:
                 #rev = 2147483640 + d (d > 7 is a problem)
-                if pos and d > 7: return 0
+                if d > 7: return 0
                 rev = push_digit(rev, d)
         else:
             if (INTMIN // 10 < rev - 1):
