@@ -7,7 +7,12 @@ and append this to the final sorted linked list. However, every time I push to t
 I need to find the next smalest element. This is an O(K) operation. I need to do this for every element.
 This gives O(K * N) if all lists are of length N.
 
-A better solution would be to use a heap and a dictionary. The heap would store the values of the head of each linked list. Popping and finding the next smallest value is an O(log(K)) operation. building the heap is an O(K) operation, but only happens once. When I pop an item from the heap, I need to know what list it came from, so I can get the next element from that linked list and put it into the heap. I can use a dictionary for this to keep an O(1) lookup time. Duplicates can be handled by keeping the value of the dictionary in a linkedlist. The time complexity of this approach would be O(log(K) * N), which is much better.
+A better solution would be to use a heap and a dictionary. The heap would store the values of the head of each
+linked list. Popping and finding the next smallest value is an O(log(K)) operation. building the heap is an O(K)
+operation, but only happens once. When I pop an item from the heap, I need to know what list it came from, so I
+can get the next element from that linked list and put it into the heap. I can use a dictionary for this to keep
+an O(1) lookup time. Duplicates can be handled by keeping the value of the dictionary in a linkedlist. The time
+complexity of this approach would be O(log(K) * N), which is much better.
 
 """
 
